@@ -1,0 +1,29 @@
+[
+
+    {
+        "type": "text",
+        "title": "Amazing Tattoo Sale!",
+        "text": "We've got a really cool tatoo sale going on now. All tattoo's 20% off now through Labor Day if you share a tweet with #Vib3INKK.",
+        "size": "large"
+    },
+    {
+        "type": "image",
+        "image": "/img/buttXO.jpg",
+        "text": "Some Dynamic Text"
+    },
+    {
+        "type": "image",
+        "image": "/img/buttRose.jpg",
+        "text": "Some Other Dynamic Text"
+    },
+    {
+        "type": "image",
+        "image": "/img/boog.jpg",
+        "text": "Boog"
+    },
+    {
+        "type": "image",
+        "image": "/img/sideTat.jpg",
+        "text": "Nice lil side tat action"
+    }
+]

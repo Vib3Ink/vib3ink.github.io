@@ -10,18 +10,12 @@
     text-align: right;
 }
 
-#cardOne {
-    color: #fff;
-    background-image: url('../img/buttXO.jpg');
-    background-size: cover;
-}
-
 .demo-card-wide > .mdl-card__menu {
     color: #fff;
 }
 
 .mdl-cell {
-    background-color: lightgray;
+    background-color: rgb(96, 125, 139);
     display: flex;
     justify-content: center;
     padding: 10px;
