@@ -1,0 +1,32 @@
+.jumbotron {
+    padding-top: 100px;
+    padding-bottom: 100px;
+    background-image: url('../img/tattooJumbotron1.jpg');
+    background-size: cover;
+}
+
+.jumbotron-text {
+    color: white;
+    text-align: right;
+}
+
+#cardOne {
+    color: #fff;
+    background-image: url('../img/buttXO.jpg');
+    background-size: cover;
+}
+
+.demo-card-wide > .mdl-card__menu {
+    color: #fff;
+}
+
+.mdl-cell {
+    background-color: lightgray;
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+}
+
+.main-content {
+    padding: 50px;
+}
