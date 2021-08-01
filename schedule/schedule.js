@@ -17,7 +17,7 @@ function CreateMonthPickerOption(monthIdx) {
         ' + MONTH_NAMES[monthIdx] + ' \
         </span> \
         <span class="mdl-list__item-secondary-action"> \
-        <label class="demo-list-radio mdl-radio mdl-js-radio mdl-js-ripple-effect" for="monthOption' + monthIdx + '"> \
+        <label class="" for="monthOption' + monthIdx + '"> \
             <input type="radio" id="monthOption' + monthIdx + '" class="mdl-radio__button" name="monthOption" value="' + monthIdx + '" onchange="onMonthClick(this.value)"/> \
         </label> \
         </span> \
