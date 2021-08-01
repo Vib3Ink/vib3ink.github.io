@@ -3,7 +3,7 @@
         "type": "text",
         "title": "Amazing Tattoo Sale!",
         "text": "We've got a really cool tatoo sale going on now. All tattoo's 20% off now through Labor Day if you share a tweet with #Vib3INKK.",
-        "size": "large"
+        "size": "small"
     },
     {
         "type": "image",
@@ -12,7 +12,7 @@
     },
     {
         "type": "image",
-        "image": "/img/buttRose.jpg",
+        "image": "/img/sideTat.jpg",
         "text": "Some Other Dynamic Text"
     },
     {
