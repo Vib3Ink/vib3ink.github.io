@@ -1,3 +1,5 @@
+'use strict';
+
 function ResizeElements() {
     $('.main-page-card-image').each(function(){
         var cw = $(this).width();

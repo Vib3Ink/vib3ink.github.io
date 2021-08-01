@@ -58,7 +58,9 @@
     <header class="mdl-layout__header mdl-color--black">
       <div class="mdl-layout__header-row">
         <!-- Title -->
-        <span class="mdl-layout-title">VIB3 INKK</span>
+        <a href="/" style="text-decoration: none; color: white;">
+          <span class="mdl-layout-title">VIB3 INKK</span>
+        </a>
         <!-- Add spacer, to align navigation to the right -->
         <div class="mdl-layout-spacer"></div>
         <!-- Navigation. We hide it in small screens. -->
@@ -118,6 +120,37 @@
                     </div>
                   </div>
                 </div>
+
+                <!-- Available Times Card -->
+                <div class="mdl-cell mdl-cell--12-col" style="display: none" id="availableTimesCell">
+                  <div class="demo-card-wide mdl-card mdl-shadow--2dp" id="availableTimesCard">
+                    <div class="mdl-card__title main-page-card-image">
+                      <h1>Available Appointment Times</h1>
+                    </div>
+                    <div class="mdl-card__supporting-text">
+                        <ul class="demo-list-item mdl-list" id="availableTimesMenu">
+                        </ul>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Submit Card -->
+                <div class="mdl-cell mdl-cell--12-col" style="display: none" id="submitCell">
+                    <div class="demo-card-wide mdl-card mdl-shadow--2dp" id="submitCard">
+                      <div class="mdl-card__title main-page-card-image">
+                        <h1>Submit</h1>
+
+                      </div>
+                      <div class="mdl-card__supporting-text">
+                          <span id="submitText"></span>
+                          <div style="text-align: right;">
+                          <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect" onclick='onSubmitClicked(this)'>
+                              Submit
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
 
             </div>
           </div>
