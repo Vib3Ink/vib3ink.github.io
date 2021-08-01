@@ -80,7 +80,7 @@ function createAvailableTimeOption(scheduledDate) {
           ' + (d.getHours() < 12 ? 'am' : 'pm') +' \
         </span> \
         <span class="mdl-list__item-secondary-action"> \
-        <label class="demo-list-radio mdl-radio mdl-js-radio mdl-js-ripple-effect" for="availableTimeOption' + i + '"> \
+        <label for="availableTimeOption' + i + '"> \
             <input type="radio" id="availableTimeOption' + i + '" class="mdl-radio__button" name="availableTimeOption" value="' + i + '" onchange="onAvailableTimeClick(this.value)"/> \
         </label> \
         </span> \</li>'

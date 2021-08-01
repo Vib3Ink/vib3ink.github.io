@@ -6,12 +6,12 @@
     display: inline;
 }
 
-#datePickerCard {
-    width: 100%;
+#monthPickerCard {
+    width: 50%;
 }
 
-#datePickerContainer {
-    width: 50%;
+#datePickerCard {
+    width: 100%;
 }
 
 #availableTimesCard {
