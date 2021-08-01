@@ -65,7 +65,6 @@
         <div class="mdl-layout-spacer"></div>
         <!-- Navigation. We hide it in small screens. -->
         <nav class="mdl-navigation mdl-layout--large-screen-only">
-          <a class="mdl-navigation__link" href="">About / Contact</a>
           <a class="mdl-navigation__link" href="">Schedule an Appointment</a>
         </nav>
       </div>
@@ -73,7 +72,6 @@
     <div class="mdl-layout__drawer">
       <span class="mdl-layout-title">VIB3 INKK</span>
       <nav class="mdl-navigation">
-        <a class="mdl-navigation__link" href="">About / Contact</a>
         <a class="mdl-navigation__link" href="">Schedule an Appointment</a>
       </nav>
     </div>
@@ -133,6 +131,32 @@
                     </div>
                   </div>
                 </div>
+
+                <!-- Personal Info Card -->
+                <div class="mdl-cell mdl-cell--12-col" style="display: none" id="personalInfoCell">
+                    <div class="demo-card-wide mdl-card mdl-shadow--2dp" id="personalInfoCard">
+                      <div class="mdl-card__title main-page-card-image">
+                        <h1>Personal Information</h1>
+                      </div>
+                      <div class="mdl-card__supporting-text">
+                        <form action="#">
+                            <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                              <input class="mdl-textfield__input" type="text" id="personalInfoName">
+                              <label class="mdl-textfield__label" for="personalInfoName">Name...</label>
+                            </div>
+                          </form>
+                          
+
+                        <form action="#">
+                            <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                              <input class="mdl-textfield__input" type="text" id="personalInfoPhoneNumber">
+                              <label class="mdl-textfield__label" for="personalInfoPhoneNumber">Phone Number...</label>
+                            </div>
+                          </form>
+
+                      </div>
+                    </div>
+                  </div>
 
                 <!-- Submit Card -->
                 <div class="mdl-cell mdl-cell--12-col" style="display: none" id="submitCell">

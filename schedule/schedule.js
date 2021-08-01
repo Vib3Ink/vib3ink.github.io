@@ -8,6 +8,8 @@ MONTH_DATE_RANGE_REGEX = [REGEX_1_TO_31, REGEX_1_TO_28, REGEX_1_TO_31, REGEX_1_T
 var selectedMonthIndex = '0';
 var scheduledDate = 0;
 var selectedHours24 = 0;
+var personalInfoName = "";
+var personalInfoPhoneNumber = "";
 
 function CreateMonthPickerOption(monthIdx) {
     monthOptionHtml = '<li class="mdl-list__item"> \
@@ -44,6 +46,7 @@ function onMonthClick(data) {
     $('#dateInput').val("");$('#dateInputLabel').text('Date of ' + MONTH_NAMES[data] + '...');
     $('#availableTimesCell').css({"display": "none"});
     $('#submitCell').css({'display' : 'none'});
+    $('#personalInfoCell').css({'display' : 'none'});
 }
 
 $('#dateInput').keyup(function() {
@@ -103,18 +106,56 @@ function displayAvailableTimes(monthIdx, date) {
 }
 
 function onAvailableTimeClick(data) {
-    var hours24 = data % 12;
+    selectedHours24 = data;
+    $('#personalInfoCell').css({'display' : 'block'});
+    UpdateSubmitText();
+    CheckPersonalInfo();
+}
+
+function UpdateSubmitText() {
+    var hours24 = selectedHours24 % 12;
     var hours = hours24;
     if(hours24 == 0) {
         hours = 12;
     }
-    selectedHours24 = data;
-    $('#submitCell').css({'display' : 'block'});
-    $('#submitText').text("Confirm consultation appointment for " + MONTH_NAMES[selectedMonthIndex] + ' ' + scheduledDate.getDate() + ', at ' + hours + ':00 ' + (data < 12 ? 'am' : 'pm'));
+    $('#submitText').text("Confirm consultation appointment for " + personalInfoName + ' on ' + MONTH_NAMES[selectedMonthIndex] + ' ' + scheduledDate.getDate() + ', at ' + hours + ':00 ' + (selectedHours24 < 12 ? 'am' : 'pm'));
 }
 
+function CheckPersonalInfo() {
+    var nameText = personalInfoName;
+    var phoneNumberText = personalInfoPhoneNumber;
+    if(nameText && phoneNumberText) {
+        $('#submitCell').css({'display' : 'block'});
+        UpdateSubmitText();
+    } else {
+        $('#submitCell').css({'display' : 'none'});
+    }
+}
+
+$('#personalInfoName').keyup(function() {
+    personalInfoName = $('#personalInfoName').val();
+    CheckPersonalInfo();
+});
+
+$('#personalInfoPhoneNumber').keyup(function() {
+    personalInfoPhoneNumber = $('#personalInfoPhoneNumber').val();
+    CheckPersonalInfo();
+});
+
+
+$('#dateInput').keyup(function() {
+    var curDateInput = $('#dateInput').val();
+    var curMonthDateRange = new RegExp(MONTH_DATE_RANGE_REGEX[selectedMonthIndex]);
+    if(curMonthDateRange.test(curDateInput)) {
+        $('#availableTimesCell').css({"display": "block"});
+        displayAvailableTimes(selectedMonthIndex, curDateInput);
+    } else {
+        $('#availableTimesCell').css({"display": "none"});
+    }
+});
+
 function onSubmitClicked(data) {
-    window.location.href="/confirmation/index.html?monthIdx=" + selectedMonthIndex + '&date=' + scheduledDate.getDate() + '&time=' + selectedHours24;
+    window.location.href="/confirmation/index.html?monthIdx=" + selectedMonthIndex + '&date=' + scheduledDate.getDate() + '&time=' + selectedHours24 + '&name=' + personalInfoName;
 }
 
 $(document).ready(function() {
