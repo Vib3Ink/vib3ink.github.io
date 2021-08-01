@@ -1,5 +1,4 @@
 [
-
     {
         "type": "text",
         "title": "Amazing Tattoo Sale!",
@@ -8,8 +7,8 @@
     },
     {
         "type": "image",
-        "image": "/img/buttXO.jpg",
-        "text": "Some Dynamic Text"
+        "image": "/img/sideTat.jpg",
+        "text": "Nice lil side tat action"
     },
     {
         "type": "image",
@@ -23,7 +22,7 @@
     },
     {
         "type": "image",
-        "image": "/img/sideTat.jpg",
-        "text": "Nice lil side tat action"
+        "image": "/img/buttXO.jpg",
+        "text": "Some Dynamic Text"
     }
 ]

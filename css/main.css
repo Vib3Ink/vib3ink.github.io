@@ -15,7 +15,6 @@
 }
 
 .mdl-cell {
-    background-color: rgb(96, 125, 139);
     display: flex;
     justify-content: center;
     padding: 10px;

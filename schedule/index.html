@@ -24,6 +24,7 @@
 
 
     <link rel="stylesheet" href="/css/main.css" />
+    <link rel="stylesheet" href="/schedule/schedule.css" />
 
     <!-- Boilerplate -->
   <!--
@@ -63,7 +64,7 @@
         <!-- Navigation. We hide it in small screens. -->
         <nav class="mdl-navigation mdl-layout--large-screen-only">
           <a class="mdl-navigation__link" href="">About / Contact</a>
-          <a class="mdl-navigation__link" href="/schedule/index.html">Schedule an Appointment</a>
+          <a class="mdl-navigation__link" href="">Schedule an Appointment</a>
         </nav>
       </div>
     </header>
@@ -71,42 +72,54 @@
       <span class="mdl-layout-title">VIB3 INKK</span>
       <nav class="mdl-navigation">
         <a class="mdl-navigation__link" href="">About / Contact</a>
-        <a class="mdl-navigation__link" href="/schedule/">Schedule an Appointment</a>
+        <a class="mdl-navigation__link" href="">Schedule an Appointment</a>
       </nav>
     </div>
     <main class="mdl-layout__content">
       <div class="page-content">
         <div class="jumbotron jumbotron-fluid">
             <div class="container jumbotron-text">
-              <h1 class="display-4">VIB3 INKK</h1>
-              <p class="lead">Modern tattoos for sophisticated individuals</p>
+              <h1 class="display-4">Schedule an Appointment</h1>
+              <p class="lead">Schedule a consultation for a $50 deposit.</p>
             </div>
           </div>
 
           <div class="main-content">
+            <div class="mdl-grid">
 
-
-
-            <div class="mdl-grid" id="main-page-tattoo-grid">
-              <!--<div class="mdl-cell mdl-cell--4-col">
-                <div class="demo-card-wide mdl-card mdl-shadow--2dp">
-                  <div class="mdl-card__title main-page-card-image" id="cardOne">
+              <!-- Month Card -->
+              <div class="mdl-cell mdl-cell--12-col">
+                <div class="demo-card-wide mdl-card mdl-shadow--2dp" id="datePickerCard">
+                  <div class="mdl-card__title main-page-card-image">
+                    <h1>Month</h1>
                   </div>
-                  <div class="mdl-card__supporting-text">
-                    Sexy tattoo on our favorite Georgia Peach!
+                  <div class="mdl-card__supporting-text" id="datePickerContainer">
+                    <ul class="demo-list-control mdl-list" id="monthMenu">
+                    </ul>
                   </div>
-                   <div class="mdl-card__menu">
-                    <button class="mdl-button mdl-button--icon mdl-js-button mdl-js-ripple-effect">
-                      <i class="material-icons">share</i>
-                    </button>
-                  </div>
+                </div>
               </div>
-              </div>
-              <div class="mdl-cell mdl-cell--4-col">6</div>
-              <div class="mdl-cell mdl-cell--4-col">6</div>
-              <div class="mdl-cell mdl-cell--4-col">6</div>-->
+
+              <!-- Date Card -->
+              <div class="mdl-cell mdl-cell--12-col" style="display: none" id="dateCard">
+                  <div class="demo-card-wide mdl-card mdl-shadow--2dp" id="datePickerCard">
+                    <div class="mdl-card__title main-page-card-image">
+                      <h1>Date</h1>
+                    </div>
+                    <div class="mdl-card__supporting-text" id="datePickerContainer">
+                      <!-- Numeric Textfield -->
+                      <form action="#">
+                          <div class="mdl-textfield mdl-js-textfield">
+                            <input class="mdl-textfield__input" type="text" pattern="\b([0-9]|[1-9][0-9])\b" id="dateInput">
+                            <label class="mdl-textfield__label" for="dateInput" id="dateInputLabel"></label>
+                            <span class="mdl-textfield__error">Invalid Date</span>
+                          </div>
+                        </form>
+                    </div>
+                  </div>
+                </div>
+
             </div>
-
           </div>
         </div>
     </main>
@@ -115,7 +128,7 @@
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="js/main.js"></script>
+    <script src="/schedule/schedule.js"></script>
 
     <!--
   <script src="/assets/js/xy-polyfill.js" nomodule></script>

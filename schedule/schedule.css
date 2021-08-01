@@ -1,0 +1,15 @@
+.demo-list-control {
+    width: 300px;
+}
+
+.demo-list-radio {
+    display: inline;
+}
+
+#datePickerCard {
+    width: 100%;
+}
+
+#datePickerContainer {
+    height: 100%;
+}
